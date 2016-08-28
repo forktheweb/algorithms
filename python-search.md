@@ -1,6 +1,7 @@
 # python search & sort algorithms
 
 ### merge sort
+```python
 	def mergeSort(alist):
 	    print("Splitting ",alist)
 	    if len(alist)>1:
@@ -36,7 +37,7 @@
 	
 	alist = [54,26,93,17,77,31,44,55,20]
 	mergeSort(alist)
-
+```
 ### heap sort
  
 	 def heapsort( aList ):
