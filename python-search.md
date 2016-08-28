@@ -145,6 +145,8 @@
 # graph search
 > a collection of graph search algorithms in python
 
+### depth-first search
+
 	graph = {'a': set(['b', 'c']),
 	         'b': set(['a', 'd', 'e']),
 	         'c': set(['a', 'f']),
