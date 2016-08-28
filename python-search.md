@@ -1,7 +1,5 @@
 # python search & sort algorithms
 
-> This is a simple list of python algorithms based on those I've used in other languages and seen in reference materials
-
 ### merge sort
 	def mergeSort(alist):
 	    print("Splitting ",alist)
