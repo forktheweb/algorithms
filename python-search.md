@@ -33,21 +33,20 @@
 	            alist[k]=righthalf[j]
 	            j=j+1
 	            k=k+1
-	    print("Merging ",alist)
 	
 	alist = [54,26,93,17,77,31,44,55,20]
 	mergeSort(alist)
 ```
 ### heap sort
- 
+
+```python
 	 def heapsort( aList ):
-	  # convert aList to heap
 	  length = len( aList ) - 1
 	  leastParent = length / 2
+	  
 	  for i in range ( leastParent, -1, -1 ):
 	    moveDown( aList, i, length )
-	 
-	  # flatten heap into sorted array
+	    
 	  for i in range ( length, 0, -1 ):
 	    if aList[0] > aList[i]:
 	      swap( aList, 0, i )
@@ -56,14 +55,11 @@
 	def moveDown( aList, first, last ):
 	  largest = 2 * first + 1
 	  while largest <= last:
-	    # right child exists and is larger than left child
 	    if ( largest < last ) and ( aList[largest] < aList[largest + 1] ):
 	      largest += 1
-	 
-	    # right child is larger than parent
+	      
 	    if aList[largest] > aList[first]:
 	      swap( aList, largest, first )
-	      # move down to largest child
 	      first = largest;
 	      largest = 2 * first + 1
 	    else:
@@ -73,9 +69,11 @@
 	  tmp = A[x]
 	  A[x] = A[y]
 	  A[y] = tmp
+```
 
 ### bubble sort
-	
+
+```python
 	def bubbleSort(alist):
 	    for passnum in range(len(alist)-1,0,-1):
 	        for i in range(passnum):
@@ -87,13 +85,13 @@
 	alist = [54,26,93,17,77,31,44,55,20]
 	bubbleSort(alist)
 	print(alist)
-
+```
 
 
  
 ### binary search
  
- 
+```python
 	def binarySearch(alist, item):
 	    if len(alist) == 0:
 	        return False
@@ -110,17 +108,21 @@
 	testlist = [0, 1, 2, 8, 13, 17, 19, 32, 42, 56]
 	print(binarySearch(testlist, 3))
 	print(binarySearch(testlist, 19))
- 
+```
+
 ### linear search
- 
+
+```python
 	def linearSearch(obj, item, start=0):
 	    for i in range(start, len(obj)):
 	        if obj[i] == item:
 	            return i
 	    return -1
+```
 
 ### ordered sequential search
 	
+```python
 	def orderedSequentialSearch(alist, item):
 	    pos = 0
 	    found = False
@@ -139,13 +141,14 @@
 		testlist = [0, 1, 2, 8, 13, 17, 19, 32, 42,56]
 		print(orderedSequentialSearch(testlist, 3))
 		print(orderedSequentialSearch(testlist, 13))
-
+```
 
 # graph search
 > a collection of graph search algorithms in python
 
 ### depth-first search
 
+```python
 	graph = {'a': set(['b', 'c']),
 	         'b': set(['a', 'd', 'e']),
 	         'c': set(['a', 'f']),
@@ -174,9 +177,11 @@
 	                stack.append((next, path + [next]))
 	
 	list(depthPaths(graph, 'a', 'f'))       # [['a', 'c', 'f'], ['a', 'b', 'e', 'f']]
+```
 
 ### bread-first search
-	
+
+```python
 	def breadthFirstSearch(graph, start):
 	    visited, queue = set(), [start]
 	    while queue:
@@ -207,3 +212,4 @@
 	        return None
 	
 	shortestLine(graph, 'a', 'f') # ['a', 'c', 'f']
+```
